@@ -6,6 +6,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: process.env.DB_URL,
+    pool: { min:0, max:5 },
     migrations: {
       directory: './data/migrations',
     },
