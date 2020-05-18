@@ -1,4 +1,5 @@
 # habit-app
+# Habyte
 ## Rorie, Keir, Liam and Susan
 
 For the rest of the week you will be working to create a habit tracker.
