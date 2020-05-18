@@ -23,7 +23,8 @@ class Login extends Component {
         fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`)
         .then(response => response.json())
         .then(user => {return this.setState({userID: user})})
-        .then((e) => {this.props.history.push("/habits/"+this.state.userID)})
+        //this.props.location.state.userID
+        .then((e) => {this.props.history.push(pathname="/habits",  state={ userID: this.state.userID})})
         .catch(error => {
             this.setState({loading: false}) 
             alert("Invalid Username or Password")})
