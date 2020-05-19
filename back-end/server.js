@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use('/login', userRoutes)
+app.use('/users', userRoutes)
 app.use('/api', routes)
 
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("./db");
 const sqlite3 = require("sqlite3").verbose();
 
-router.get("/users", function (req, res, next) {
+router.get("/all", function (req, res, next) {
   db("users")
     .select()
     .then(function (users) {
@@ -11,20 +11,20 @@ router.get("/users", function (req, res, next) {
     });
 });
 
-router.get("/users/:id", function (req, res, next) {
+router.get("/:id", function (req, res, next) {
   db("users")
     .select()
     .where("userID", parseInt(req.params.id))
     .first()
     .then(function (user) {
-      res.status(200).json(user);
+      res.status(200).json(user.userID);
     })
     .catch(function (error) {
       next(error);
     });
 });
 
-router.post("/users", function (req, res, next) {
+router.post("/register", function (req, res, next) {
   console.log(req.body);
   db("users")
     .insert(req.body)
