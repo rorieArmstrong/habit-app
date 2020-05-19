@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
-class Login extends Component {
+class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,7 +52,6 @@ class Login extends Component {
     }
     
     render() {
-        console.log(this.state)
         return (
             <div className="Sign Up">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
@@ -76,4 +75,4 @@ class Login extends Component {
     }
 }
 
-export default withRouter(Login);
+export default withRouter(SignUp);
