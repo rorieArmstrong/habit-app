@@ -5,7 +5,7 @@ class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            frequency: null,
+            frequency: "daily",
             activity: null,
             userID: null,
             today: false,
@@ -58,7 +58,7 @@ class Form extends Component {
         return (
             <div className="Sign Up">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Activity" value={this.state.value} name='activity' onChange={this.handleChange} />
+                    <input type="text" placeholder="Activity" value={this.state.value} name='activity' onChange={this.handleChange} required/>
                     <select 
                         onChange={this.handleChange}
                         value={this.state.frequency}
