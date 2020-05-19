@@ -14,47 +14,43 @@ class HomePage extends Component {
         return this.setState({status: value})
     }
 
-    display = () => {
-        // if(this.state.status === "login"){
-        //     return (
-        //         <div>
-        //             <div>
-        //                 <Login/>
-        //                 <button className= "signup" onClick={this.handleChange("signup")}>
-        //                     Sign Up
-        //                 </button>
-        //             </div>
-        //         </div>
-        //     )
-        // } else if (this.state.status === "signup"){
-        //     return (
-        //         <div>
-        //             <div>
-        //                 <button className= "login" onClick={this.handleChange("login")}>
-        //                     Log In
-        //                 </button>
-        //                 <SignUp/>
-        //             </div>
-        //         </div>
-        //     )
-        // }else{
+    render() {
+        if(this.state.status === "login"){
             return (
                 <div>
                     <div>
-                        <button className= "login" onClick={this.handleChange("login")}>
-                            Log In 
-                        </button>
-                        <button className= "signup" onClick={this.handleChange("signup")}>
+                        <Login/>
+                        <button className= "signup" onClick={() => this.handleChange("signup")}>
                             Sign Up
                         </button>
                     </div>
                 </div>
             )
-        // };
-    }
-
-    render() {
-        return this.display();
+        } else if (this.state.status === "signup"){
+            return (
+                <div>
+                    <div>
+                        <SignUp/>
+                        <button className= "login" onClick={() => this.handleChange("login")}>
+                            Log In
+                        </button>
+                    </div>
+                </div>
+            )
+        }else{
+            return (
+                <div>
+                    <div>
+                        <button className= "login" onClick={() => this.handleChange("login")}>
+                            Log In 
+                        </button>
+                        <button className= "signup" onClick={() => this.handleChange("signup")}>
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+            )
+        };
     }
 }
 
