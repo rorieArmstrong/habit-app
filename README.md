@@ -16,17 +16,17 @@ Your website should have the following technical functionality:
 ## Standups
 ### Tuesday
 What you achieved yesterday.
--Liam:
--Susan:
--Rorie:
--Keir:
+-Liam: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
+-Susan: Was Ill :(
+-Rorie: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app. Create Log in template.
+-Keir:  Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
 What you aim to achieve today.
--Liam:
--Susan:
--Rorie:
--Keir:
+-Liam: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+-Susan: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+-Rorie: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+-Keir: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
 Any blockers (things that are going to stop you achieving you aim)
--Liam:
+-Liam: Can't think of any right now.
 -Susan:
 -Rorie:
 -Keir:
