@@ -1,10 +1,12 @@
 process.env.NODE_ENV = 'test';
 var chai = require('chai');
 var chaiHttp = require('chai-http');
-var server = require('../app');
-var knex = require('../db/knex');
+var server = require('../server');
+var knex = require('../db');
 var should = chai.should();
 chai.use(chaiHttp);
+
+
 describe('API Routes', function() {
   beforeEach(function(done) {
     knex.migrate.rollback()

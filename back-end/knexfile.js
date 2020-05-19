@@ -20,14 +20,14 @@ module.exports = {
   test: {
     client: 'sqlite3',
     connection: {
-      filename: './data/habits.sqlite3'
+      filename: './back-end/data/habits.sqlite3'
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations',
+      directory: './back-end/data/migrations',
     },
     seeds: {
-      directory: './data/seeds'
+      directory: './back-end/data/seeds'
     }
   },
 
