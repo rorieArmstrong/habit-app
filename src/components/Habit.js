@@ -9,6 +9,13 @@ class Habit extends Component {
         }
     }
 
+    deleteHabit = () => {
+        let confirm = confirm("Are you sure you want to delete this habit?")
+        if(confirm){
+            axios.delete(`loacalhost:8000/api/habits/${this.state.data.habitID}`)
+            .then(res => {alert("habit deleted")})
+        }
+    }
 
     doneToday = () => {
         return this.setState({today: !this.state.today})
@@ -18,6 +25,9 @@ class Habit extends Component {
         return (
             <div>
                 <h3>{this.state.data.activity}</h3>
+                <button onClick={() => {this.deleteHabit()}}>
+                    x
+                </button>
                 <p>{this.state.data.streak}</p>
                 <label>
                     <input type="checkbox" value={this.state.today} name="today" onChange={this.doneToday} />
