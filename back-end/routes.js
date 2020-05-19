@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const db = require("./db");
-const sqlite3 = require("sqlite3").verbose();
 
 router.get("/habits", function (req, res, next) {
   db("habits")
@@ -77,6 +76,7 @@ router.put("/habits/:id", function (req, res, next) {
 });
 
 router.delete("/habits/:id", function (req, res, next) {
+  const oldRow = null;
   db("habits")
     .select()
     .where("habitID", parseInt(req.params.id))
@@ -85,8 +85,8 @@ router.delete("/habits/:id", function (req, res, next) {
       db("habits")
         .where("habitID", parseInt(req.params.id))
         .del()
-        .then(function (response) {
-          res.status(200).json(response);
+        .then(function () {
+          res.status(200).json('row deleted');
         })
         .catch(function (error) {
           next(error);

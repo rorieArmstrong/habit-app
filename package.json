@@ -25,7 +25,6 @@
     "test2": "mocha 'back-end/tests/'",
     "eject": "react-scripts eject"
   },
-
   "eslintConfig": {
     "extends": "react-app"
   },
