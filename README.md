@@ -15,69 +15,109 @@ Your website should have the following technical functionality:
 ---
 ## Standups
 ### Tuesday
-What you achieved yesterday.
--Liam:
--Susan:
--Rorie:
--Keir:
-What you aim to achieve today.
--Liam:
--Susan:
--Rorie:
--Keir:
-Any blockers (things that are going to stop you achieving you aim)
--Liam:
--Susan:
--Rorie:
--Keir:
+#### What you achieved yesterday.
+
+-Liam: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
+
+-Susan: Was Ill :(
+
+-Rorie: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app. Create Log in template.
+
+-Keir:  Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
+
+#### What you aim to achieve today.
+-Liam: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+
+-Susan: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+
+-Rorie: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+
+-Keir: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+
+#### Any blockers (things that are going to stop you achieving you aim)
+-Liam: Can't think of any right now.
+
+-Susan: Can't think of any right now.
+
+-Rorie: Can't think of any right now.
+
+-Keir: Can't think of any right now.
 ### Wednesday
-What you achieved yesterday.
+#### What you achieved yesterday.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-What you aim to achieve today.
+#### What you aim to achieve today.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-Any blockers (things that are going to stop you achieving you aim)
+#### Any blockers (things that are going to stop you achieving you aim)
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
 ### Thursday
-What you achieved yesterday.
+#### What you achieved yesterday.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-What you aim to achieve today.
+#### What you aim to achieve today.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-Any blockers (things that are going to stop you achieving you aim)
+#### Any blockers (things that are going to stop you achieving you aim)
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
 ### Friday
-What you achieved yesterday.
+#### What you achieved yesterday.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-What you aim to achieve today.
+#### What you aim to achieve today.
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
-Any blockers (things that are going to stop you achieving you aim)
+#### Any blockers (things that are going to stop you achieving you aim)
 -Liam:
+
 -Susan:
+
 -Rorie:
+
 -Keir:
+
 ---
 ### What we have learned
 ### What challenges we overcame

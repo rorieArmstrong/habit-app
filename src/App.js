@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Login from './components/Login'
 import ViewPage from './pages/ViewPage'
 import { Route, Switch, BrowserRouter as Router} from "react-router-dom";
+import HomePage from './pages/HomePage';
 
 
 function App() {
@@ -11,8 +10,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/' exact  component={Login}/>
-          <Route path='/habits/:id' component={ViewPage} />
+          <Route path='/' exact  component={HomePage}/>
+          <Route path='/habits' component={ViewPage} />
         </Switch>
       </Router>
     </div>

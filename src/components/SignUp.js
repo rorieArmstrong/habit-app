@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-class Login extends Component {
+
+class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
             userName: null,
             password: null,
+            firstName: null,
+            surname: null,
             userID: null,
             loading: false
         }
@@ -19,25 +22,43 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({loading: true})
-        // this route gets the userID matching the input 
-        fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`)
+        const data = {
+            userName: this.state.userName,
+            password: this.state.password,
+            firstName: this.state.firstName,
+            surname: this.state.surname,
+        }
+        // post the data
+        fetch("http://localhost:8000/signup", {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            headers: {
+              'Content-Type': 'application/json'
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+          })
+          // then sign them in
+        .then(() => fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`))
         .then(response => response.json())
         .then(user => {return this.setState({userID: user})})
         //this.props.location.state.userID
         .then((e) => {this.props.history.push("/habits",  { userID: this.state.userID})})
         .catch(error => {
             this.setState({loading: false}) 
-            alert("Invalid Username or Password")})
+            alert("Invalid Sign Up")})
 
-        // this.setState({loading: false})
+        // redirect as if they had just logged in
     }
     
     render() {
         return (
-            <div className="Login">
+            <div className="Sign Up">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Username" value={this.state.value} name='userName' onChange={this.handleChange} />
                     <input type="password" placeholder="Password" value={this.state.value} name='password' onChange={this.handleChange} />
+                    <input type="text" placeholder="First Name" value={this.state.value} name='firstName' onChange={this.handleChange} />
+                    <input type="text" placeholder="Surname" value={this.state.value} name='surname' onChange={this.handleChange} />
                     <button disabled={this.state.loading} className="button" type="submit">
                     {this.state.loading && (
                         <i
@@ -45,8 +66,8 @@ class Login extends Component {
                         style={{ marginRight: "5px" }}
                         />
                     )}
-                    {this.state.loading && <span>Logining In</span>}
-                    {!this.state.loading && <span>Submit</span>}
+                    {this.state.loading && <span>Creating Acount</span>}
+                    {!this.state.loading && <span>Create Acount</span>}
                     </button>
                 </form>
             </div>
@@ -54,4 +75,4 @@ class Login extends Component {
     }
 }
 
-export default withRouter(Login);
+export default withRouter(SignUp);
