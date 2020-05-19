@@ -24,6 +24,18 @@ router.get("/habits/:id", function (req, res, next) {
     });
 });
 
+router.get('/habits/users/:id', function(req, res, next) {
+    db('habits')
+    .select()
+    .where('userID', parseInt(req.params.id))
+    .then(function (habits) {
+        res.status(200).json(habits);
+    })
+    .catch(function (error) {
+        next(error);
+    })
+})
+
 router.post("/habits", function (req, res, next) {
   console.log(req.body);
   db("habits")

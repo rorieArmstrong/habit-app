@@ -17,6 +17,21 @@ module.exports = {
     }
   },
 
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: './back-end/data/habits.sqlite3'
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: './back-end/data/migrations',
+    },
+    seeds: {
+      directory: './back-end/data/seeds'
+    }
+  },
+
+
   staging: {
     client: 'postgresql',
     connection: {
