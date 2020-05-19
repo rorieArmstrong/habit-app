@@ -11,16 +11,18 @@ router.get("/all", function (req, res, next) {
     });
 });
 
-router.get("/:id", function (req, res, next) {
+router.get("/:username/:password", function (req, res, next) {
   db("users")
     .select()
-    .where("userID", parseInt(req.params.id))
+    .where("user_name", req.params.username)
+    .where("password", req.params.password)
     .first()
     .then(function (user) {
       res.status(200).json(user.userID);
     })
     .catch(function (error) {
-      next(error);
+      res.status(403).send('access denied')
+      console.log('wrong password or username');
     });
 });
 
