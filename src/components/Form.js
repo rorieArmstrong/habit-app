@@ -7,7 +7,7 @@ class Form extends Component {
         this.state = {
             frequency: "daily",
             activity: null,
-            userID: null,
+            userID: this.props.userID,
             today: false,
             loading: false
         }
@@ -25,14 +25,30 @@ class Form extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({loading: true})
+        let now = new Date();
+        let dd = now.getDate();
+
+        let mm = now.getMonth()+1; 
+        let yyyy = now.getFullYear();
+        if(dd<10) 
+        {
+            dd='0'+dd;
+        } 
+
+        if(mm<10) 
+        {
+            mm='0'+mm;
+        } 
+        let date = yyyy+'--'+ mm+'--'+dd;
         const data = {
-            userName: this.state.userName,
-            password: this.state.password,
-            firstName: this.state.firstName,
-            surname: this.state.surname,
+            frequency: this.state.frequency,
+            activity: this.state.activity,
+            userID: this.state.userID,
+            streak: +this.state.today,
+            date_of_entry: date
         }
         // post the data
-        fetch("http://localhost:8000/signup", {
+        fetch("http://localhost:8000/api/habits", {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             headers: {
@@ -42,14 +58,19 @@ class Form extends Component {
             body: JSON.stringify(data) // body data type must match "Content-Type" header
           })
           // then sign them in
-        .then(() => fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`))
-        .then(response => response.json())
-        .then(user => {return this.setState({userID: user})})
-        //this.props.location.state.userID
-        .then((e) => {this.props.history.push("/habits",  { userID: this.state.userID})})
+        .then((e) => {
+            alert("Habbit Submited!")
+        })
+        .then(() => {window.location.reload(true)})
+        // .then(() => { return this.setState({
+        //     frequency: "daily",
+        //     activity: null,
+        //     today: false,
+        //     loading: false
+        // })})
         .catch(error => {
             this.setState({loading: false}) 
-            alert("Invalid Sign Up")})
+            alert(error)})
 
         // redirect as if they had just logged in
     }

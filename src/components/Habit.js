@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Habit extends Component {
     constructor(props) {
         super(props);
         this.state={
-            data:this.props.data,
+            data: this.props.data,
             today: false
         }
     }
 
-    deleteHabit = () => {
-        let confirm = confirm("Are you sure you want to delete this habit?")
-        if(confirm){
-            axios.delete(`loacalhost:8000/api/habits/${this.state.data.habitID}`)
+    auth = () => {
+        return window.confirm("Are you sure you want to delete this habit?")
+    }
+
+    deleteHabit = (event) => {
+        let auth = this.auth();
+        if(auth){
+            axios.delete(`http://localhost:8000/api/habits/${this.state.data.habitID}`)
             .then(res => {alert("habit deleted")})
+            .then(window.location.reload(false))
+            .catch(error => {console.log(error)})
         }
     }
 
@@ -26,7 +33,7 @@ class Habit extends Component {
             <div>
                 <h3>{this.state.data.activity}</h3>
                 <button onClick={() => {this.deleteHabit()}}>
-                    x
+                    X
                 </button>
                 <p>{this.state.data.streak}</p>
                 <label>
