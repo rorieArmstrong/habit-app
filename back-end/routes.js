@@ -25,8 +25,10 @@ router.get("/habits/:id", function (req, res, next) {
 
 router.get('/habits/users/:id', function(req, res, next) {
     db('habits')
-    .select()
+    .select('habitID', 'activity', 'date_of_entry', 'frequency', 'streak')
+    .distinct('activity')
     .where('userID', parseInt(req.params.id))
+    .groupBy('activity')
     .then(function (habits) {
         res.status(200).json(habits);
     })
