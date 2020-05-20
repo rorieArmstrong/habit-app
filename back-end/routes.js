@@ -76,7 +76,6 @@ router.put("/habits/:id", function (req, res, next) {
 });
 
 router.delete("/habits/:id", function (req, res, next) {
-  const oldRow = null;
   db("habits")
     .select()
     .where("habitID", parseInt(req.params.id))

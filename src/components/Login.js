@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +21,7 @@ class Login extends Component {
         event.preventDefault();
         this.setState({loading: true})
         // this route gets the userID matching the input 
-        fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`)
+        fetch(`http://localhost:8000/users/${this.state.userName}/${this.state.password}`)
         .then(response => response.json())
         .then(user => {return this.setState({userID: user})})
         //this.props.location.state.userID

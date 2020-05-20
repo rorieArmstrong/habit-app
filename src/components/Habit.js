@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+const axios = require('axios');
+
 
 class Habit extends Component {
     constructor(props) {
