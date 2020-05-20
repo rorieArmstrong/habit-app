@@ -21,6 +21,7 @@
     "sqlite3": "^4.2.0"
   },
   "scripts": {
+    "start-server": "nodemon back-end/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -24,6 +24,7 @@ router.get("/habits/:id", function (req, res, next) {
 });
 
 router.get('/habits/users/:id', function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
     db('habits')
     .select('habitID', 'activity', 'date_of_entry', 'frequency', 'streak')
     .distinct('activity')
@@ -38,6 +39,7 @@ router.get('/habits/users/:id', function(req, res, next) {
 })
 
 router.post("/habits", function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
   console.log(req.body);
   db("habits")
     .insert(req.body)
@@ -78,6 +80,7 @@ router.put("/habits/:id", function (req, res, next) {
 });
 
 router.delete("/habits/:id", function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
   db("habits")
     .select()
     .where("habitID", parseInt(req.params.id))

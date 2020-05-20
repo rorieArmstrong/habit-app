@@ -11,7 +11,7 @@ class HabitList extends Component {
     }
     
     getData = () => {
-        fetch(`localhost:8000/api/habits/users/${this.state.userID}`)
+        fetch(`http://localhost:8000/api/habits/users/1`)
         .then(response => response.json())
         .then(habits => {return this.setState({habits: habits})})
         .catch(err => {
@@ -26,18 +26,18 @@ class HabitList extends Component {
     render() {
         return (
             <div>
-                <form action="" method="POST">
+                <div>
                     {this.state.habits.map(habit => {
                         return (
-                            <div>
-                                <Habit props={{data: habit}}/>
+                            <div key={habit.habitID}>
+                                <Habit  data={habit}/>
                             </div>
                         )
                     })}
                     <button className="button" type="submit">
                         <span>Update Habits</span>
                     </button>
-                </form>
+                </div>
             </div>
 
         );
