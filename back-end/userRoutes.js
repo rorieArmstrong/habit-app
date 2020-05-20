@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require("./db");
 const sqlite3 = require("sqlite3").verbose();
 
+
 router.get("/all", function (req, res, next) {
   db("users")
     .select()
