@@ -13,8 +13,8 @@ class ViewPage extends Component {
     render() {
         return (
             <div>
-                <HabiList props={{userID: 1}}/>
-                <Form/>
+                <HabiList userID={1}/>
+                <Form userID={1}/>
             </div>
         );
     }

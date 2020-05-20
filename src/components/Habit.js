@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Habit extends Component {
     constructor(props) {
         super(props);
         this.state={
-            data:this.props.data,
+            data: this.props.data,
             today: false
         }
     }
 
-    deleteHabit = () => {
-        let confirm = confirm("Are you sure you want to delete this habit?")
-        if(confirm){
+    deleteHabit = (event) => {
+        let auth = true
+        // let auth = confirm("Are you sure you want to delete this habit?")
+        if(auth){
             axios.delete(`loacalhost:8000/api/habits/${this.state.data.habitID}`)
             .then(res => {alert("habit deleted")})
         }
