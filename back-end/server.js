@@ -7,6 +7,7 @@ const userRoutes = require('./userRoutes')
 const sqlite3 = require('sqlite3').verbose()
 const cors = require('cors')
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(cors())
 app.use(bodyParser.urlencoded({

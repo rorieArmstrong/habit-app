@@ -5,9 +5,9 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: null,
+            user_name: null,
             password: null,
-            firstName: null,
+            first_name: null,
             surname: null,
             userID: null,
             loading: false
@@ -23,13 +23,13 @@ class SignUp extends Component {
         event.preventDefault();
         this.setState({loading: true})
         const data = {
-            userName: this.state.userName,
+            user_name: this.state.user_name,
             password: this.state.password,
-            firstName: this.state.firstName,
+            first_name: this.state.first_name,
             surname: this.state.surname,
         }
         // post the data
-        fetch("http://localhost:8000/signup", {
+        fetch("http://localhost:8000/users/register", {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             headers: {
@@ -39,14 +39,16 @@ class SignUp extends Component {
             body: JSON.stringify(data) // body data type must match "Content-Type" header
           })
           // then sign them in
-        .then(() => fetch(`http://localhost:8000/userAuth/${this.state.userName}/${this.state.password}`))
+        .then(() => fetch(`http://localhost:8000/users/${this.state.user_name}/${this.state.password}`))
         .then(response => response.json())
         .then(user => {return this.setState({userID: user})})
         //this.props.location.state.userID
         .then((e) => {this.props.history.push("/habits",  { userID: this.state.userID})})
         .catch(error => {
-            this.setState({loading: false}) 
-            alert("Invalid Sign Up")})
+            console.log(error);
+            this.setState({loading: false});
+            alert("Invalid Sign Up")});
+            
 
         // redirect as if they had just logged in
     }
@@ -55,9 +57,9 @@ class SignUp extends Component {
         return (
             <div className="Sign Up">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Username" value={this.state.value} name='userName' onChange={this.handleChange} />
+                    <input type="text" placeholder="Username" value={this.state.value} name='user_name' onChange={this.handleChange} />
                     <input type="password" placeholder="Password" value={this.state.value} name='password' onChange={this.handleChange} />
-                    <input type="text" placeholder="First Name" value={this.state.value} name='firstName' onChange={this.handleChange} />
+                    <input type="text" placeholder="First Name" value={this.state.value} name='first_name' onChange={this.handleChange} />
                     <input type="text" placeholder="Surname" value={this.state.value} name='surname' onChange={this.handleChange} />
                     <button disabled={this.state.loading} className="button" type="submit">
                     {this.state.loading && (

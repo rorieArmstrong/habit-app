@@ -6,7 +6,7 @@ class ViewPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // userID: this.props.location.state.userID
+            userID: this.props.location.state.userID
         }
     }
     

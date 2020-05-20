@@ -26,8 +26,10 @@ router.get("/habits/:id", function (req, res, next) {
 router.get('/habits/users/:id', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
     db('habits')
-    .select()
+    .select('habitID', 'activity', 'date_of_entry', 'frequency', 'streak')
+    .distinct('activity')
     .where('userID', parseInt(req.params.id))
+    .groupBy('activity')
     .then(function (habits) {
         res.status(200).json(habits);
     })
@@ -79,7 +81,6 @@ router.put("/habits/:id", function (req, res, next) {
 
 router.delete("/habits/:id", function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
-  const oldRow = null;
   db("habits")
     .select()
     .where("habitID", parseInt(req.params.id))
