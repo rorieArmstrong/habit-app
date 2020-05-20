@@ -61,6 +61,7 @@ class Form extends Component {
         .then((e) => {
             alert("Habbit Submited!")
         })
+        .then(() => {window.location.reload(true)})
         // .then(() => { return this.setState({
         //     frequency: "daily",
         //     activity: null,

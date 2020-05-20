@@ -10,12 +10,17 @@ class Habit extends Component {
         }
     }
 
+    auth = () => {
+        return window.confirm("Are you sure you want to delete this habit?")
+    }
+
     deleteHabit = (event) => {
-        let auth = true
-        // let auth = confirm("Are you sure you want to delete this habit?")
+        let auth = this.auth();
         if(auth){
-            axios.delete(`loacalhost:8000/api/habits/${this.state.data.habitID}`)
+            axios.delete(`http://localhost:8000/api/habits/${this.state.data.habitID}`)
             .then(res => {alert("habit deleted")})
+            .then(window.location.reload(false))
+            .catch(error => {console.log(error)})
         }
     }
 
@@ -28,7 +33,7 @@ class Habit extends Component {
             <div>
                 <h3>{this.state.data.activity}</h3>
                 <button onClick={() => {this.deleteHabit()}}>
-                    x
+                    X
                 </button>
                 <p>{this.state.data.streak}</p>
                 <label>
