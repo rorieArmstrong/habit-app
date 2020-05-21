@@ -68,11 +68,7 @@ class Habit extends Component {
                     X
                 </button>
                 <p>{this.state.data.streak}</p>
-                <p>Done today: {this.state.data.date_of_entry === this.state.date && this.state.data.streak >= 1? "Yes": "No"}</p>
-                <label>
-                    <input type="checkbox" value={this.state.today} name="today" onChange={this.doneToday} />
-                    Have you done this today?
-                </label>
+                <p>Done today: {this.state.data.date_of_entry === this.state.date? "Yes": "No"}</p>
             </div>
         );
     }
