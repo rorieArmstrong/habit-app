@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
       tbl.integer('userID');
       tbl.string('activity').notNullable();
       tbl.date('date_of_entry');
+      tbl.date('date_of_streak');
       tbl.string('frequency').notNullable();
       tbl.integer('streak');
   })

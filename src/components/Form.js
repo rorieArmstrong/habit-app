@@ -45,7 +45,8 @@ class Form extends Component {
             activity: this.state.activity,
             userID: this.state.userID,
             streak: +this.state.today,
-            date_of_entry: date
+            date_of_entry: date,
+            date_of_streak: date
         }
         // post the data
         fetch("http://localhost:8000/api/habits", {
@@ -57,22 +58,13 @@ class Form extends Component {
             },
             body: JSON.stringify(data) // body data type must match "Content-Type" header
           })
-          // then sign them in
         .then((e) => {
-            alert("Habbit Submited!")
+            alert("Habit Submited!")
         })
         .then(() => {window.location.reload(true)})
-        // .then(() => { return this.setState({
-        //     frequency: "daily",
-        //     activity: null,
-        //     today: false,
-        //     loading: false
-        // })})
         .catch(error => {
             this.setState({loading: false}) 
             alert(error)})
-
-        // redirect as if they had just logged in
     }
     
     render() {
