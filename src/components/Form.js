@@ -14,8 +14,9 @@ class Form extends Component {
     };
 
     handleChange = (event) => {
-        event.preventDefault();
+       
         return this.setState({[event.target.name]: event.target.value})
+        event.preventDefault();
     }
 
     doneToday = () => {
@@ -69,12 +70,13 @@ class Form extends Component {
     
     render() {
         return (
-            <div className="signUp">
+            <div className="signUp" data-test="component-form">
                 <form className="userAuth" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Activity" value={this.state.value} name='activity' onChange={this.handleChange} required/>
                     <select 
                         onChange={this.handleChange}
                         value={this.state.frequency}
+                        data-test="sel-frequency"
                         name="frequency">
                             <option value="daily">daily</option>
                             <option value="weekly">weekly</option>
@@ -100,4 +102,4 @@ class Form extends Component {
     }
 }
 
-export default withRouter(Form);
+export default Form;

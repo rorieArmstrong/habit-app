@@ -15,12 +15,13 @@ class SignUp extends Component {
     };
 
     handleChange = (event) => {
-        event.preventDefault();
+
         return this.setState({[event.target.name]: event.target.value})
+        event.preventDefault();
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
+     
         this.setState({loading: true})
         const data = {
             user_name: this.state.user_name,
@@ -51,16 +52,17 @@ class SignUp extends Component {
             
 
         // redirect as if they had just logged in
+        event.preventDefault();
     }
     
     render() {
         return (
             <div className="signUp">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Username" value={this.state.value} name='user_name' onChange={this.handleChange} />
+                    <input type="text" placeholder="Username" value={this.state.value} name='user_name' onChange={this.handleChange} data-test="inp-username" />
                     <input type="password" placeholder="Password" value={this.state.value} name='password' onChange={this.handleChange} />
-                    <input type="text" placeholder="First Name" value={this.state.value} name='first_name' onChange={this.handleChange} />
-                    <input type="text" placeholder="Surname" value={this.state.value} name='surname' onChange={this.handleChange} />
+                    <input type="text" placeholder="First Name" value={this.state.value} name='first_name' onChange={this.handleChange} data-test="inp-firstName" />
+                    <input type="text" placeholder="Surname" value={this.state.value} name='surname' onChange={this.handleChange} data-test="inp-surname"/>
                     <button disabled={this.state.loading} className="button" type="submit">
                     {this.state.loading && (
                         <i
@@ -77,4 +79,4 @@ class SignUp extends Component {
     }
 }
 
-export default withRouter(SignUp);
+export default SignUp;

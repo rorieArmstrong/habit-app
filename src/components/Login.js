@@ -5,7 +5,7 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: null,
+            userName: '',
             password: null,
             userID: null,
             loading: false
@@ -13,13 +13,13 @@ class Login extends Component {
     };
 
     handleChange = (event) => {
-        event.preventDefault();
         return this.setState({[event.target.name]: event.target.value})
+        event.preventDefault();
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.setState({loading: true})
+        this.setState({loading: true, isLoged: true})
         // this route gets the userID matching the input 
         fetch(`http://localhost:8000/users/${this.state.userName}/${this.state.password}`)
         .then(response => response.json())
@@ -30,7 +30,7 @@ class Login extends Component {
             this.setState({loading: false}) 
             alert("Invalid Username or Password")})
 
-        // this.setState({loading: false})
+        this.setState({loading: false})
     }
     
     render() {
@@ -55,4 +55,4 @@ class Login extends Component {
     }
 }
 
-export default withRouter(Login);
+ export default Login;

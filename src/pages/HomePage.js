@@ -18,10 +18,10 @@ class HomePage extends Component {
     render() {
         if(this.state.status === "login"){
             return (
-                <div>
+                <div >
                     <div>
-                        <Login/>
-                        <button className= "signup" onClick={() => this.handleChange("signup")}>
+                        <Login data-test="login-component"/>
+                        <button className= "signup" onClick={() => this.handleChange("signup")} data-test="login-button">
                             Sign Up
                         </button>
                     </div>
@@ -32,7 +32,7 @@ class HomePage extends Component {
                 <div>
                     <div>
                         <SignUp/>
-                        <button className= "login" onClick={() => this.handleChange("login")}>
+                        <button className= "login" onClick={() => this.handleChange("login")} data-test="signUp-button">
                             Log In
                         </button>
                     </div>
@@ -40,14 +40,14 @@ class HomePage extends Component {
             )
         }else{
             return (
-                <div className="Page">
+                <div className="Page" data-test="component-HomePage">
                     <h1>Welcome to Habyte</h1>
                     <h3>the habit tracker for you</h3>
                     <div>
-                        <button className= "login" onClick={() => this.handleChange("login")}>
+                        <button className= "login" onClick={() => this.handleChange("login")} data-test="login-button" >
                             Log In 
                         </button>
-                        <button className= "signup" onClick={() => this.handleChange("signup")}>
+                        <button className= "signup" onClick={() => this.handleChange("signup")} data-test="signUp-button">
                             Sign Up
                         </button>
                     </div>

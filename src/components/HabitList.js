@@ -170,7 +170,7 @@ class HabitList extends Component {
 
     render() {
         return (
-            <div classname='habitList'>
+            <div classname='habitList' data-test="component-HabitList">
                 <p className="welcomeTitle">Welcome, {this.state.firstName}</p>
                 <form onSubmit={this.addToStreak}>
                     {this.state.habits.map(habit => {
@@ -184,7 +184,8 @@ class HabitList extends Component {
                             </div>
                         )
                     })}
-                    <button className="button" type="submit">
+                    <button className="button" type="submit"
+                    data-test="button-update">
                         <span>Update Habits</span>
                     </button>
                 </form>

@@ -33,9 +33,9 @@ class ViewPage extends Component {
 
     render() {
         return (
-            <div>
-                <HabiList userID={this.props.location.state.userID} date={this.state.date}/>
-                <Form userID={this.props.location.state.userID}/>
+            <div data-test="component-ViewPage">
+                <HabiList userID={this.props.location.state.userID} date={this.state.date} data-test="component-habitList"/>
+                <Form userID={this.props.location.state.userID} data-test="component-form"/>
             </div>
         );
     }
