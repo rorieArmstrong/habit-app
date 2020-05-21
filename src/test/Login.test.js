@@ -34,6 +34,17 @@ describe('<Login />', () => {
     it('should render a <form />', () => {
         expect(wrapper.find('form').length).toEqual(1);
     });
+
+   
+    it('should fetch user data', () => {
+        // wrapper.find('button').simulate('click')
+        const fetchSpy = jest.spyOn(window, 'fetch');
+        const toDoListInstance = shallow(
+        <Login/>
+        );
+        expect(fetchSpy).toBeCalled(0);
+
+    });
   
   })
 
@@ -69,4 +80,5 @@ describe('Test case for testing login',() =>{
         wrapper.find('button').simulate('click');
         expect(wrapper.state('loading')).toBe(false);
         })
+
     })

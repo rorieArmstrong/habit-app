@@ -12,9 +12,9 @@ class ViewPage extends Component {
     
     render() {
         return (
-            <div>
-                <HabiList userID={1}/>
-                <Form userID={1}/>
+            <div data-test="component-ViewPage" >
+                <HabiList userID={1} data-test="component-habitList"/>
+                <Form userID={1} data-test="component-form"/>
             </div>
         );
     }

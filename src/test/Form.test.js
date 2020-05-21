@@ -106,3 +106,15 @@ describe('Test case for testing Form',() =>{
  
 
 })
+
+describe('ToDoList component', () => {
+    describe('when rendered', () => {
+      it('should fetch a list of tasks', () => {
+        const fetchSpy = jest.spyOn(window, 'fetch');
+        const toDoListInstance = shallow(
+          <Form/>
+        );
+        expect(fetchSpy).toBeCalled();
+      });
+    });
+  });

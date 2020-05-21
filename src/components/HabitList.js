@@ -25,16 +25,17 @@ class HabitList extends Component {
 
     render() {
         return (
-            <div>
+            <div data-test="component-HabitList" >
                 <div>
                     {this.state.habits.map(habit => {
                         return (
-                            <div key={habit.habitID}>
+                            <div key={habit.habitID} >
                                 <Habit  data={habit}/>
                             </div>
                         )
                     })}
-                    <button className="button" type="submit">
+                    <button className="button" type="submit"
+                    data-test="button-update">
                         <span>Update Habits</span>
                     </button>
                 </div>

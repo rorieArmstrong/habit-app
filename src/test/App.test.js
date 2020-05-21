@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import App from '../App'
 
 describe('<App/>', () => {
+    
   it('mounts to DOM', () => {
       const div = document.createElement('div');
       ReactDOM.render(<App />, div);
@@ -23,6 +24,6 @@ describe('<App/>', () => {
 
   it('should render 4 Routes to App Component', () =>{
     expect(wrapper.find('Route').length).toEqual(2);
-})
+  })
 
 })
