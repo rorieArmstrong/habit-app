@@ -12,6 +12,15 @@ router.get("/all", function (req, res, next) {
     });
 });
 
+router.get("/:id", function (req, res, next) { // get single user
+  db("users")
+    .select()
+    .where('userID', req.params.id)
+    .then(function (user) {
+      res.status(200).json(user);
+    });
+});
+
 router.get("/:username/:password", function (req, res, next) {
   db("users")
     .select()
