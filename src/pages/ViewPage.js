@@ -7,7 +7,7 @@ class ViewPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // userID: this.props.location.state.userID,
+            userID: this.props.location.state.userID,
             date: ""
         }
     }
@@ -34,8 +34,8 @@ class ViewPage extends Component {
     render() {
         return (
             <div>
-                <HabiList userID={1} date={this.state.date}/>
-                <Form userID={1}/>
+                <HabiList userID={this.props.location.state.userID} date={this.state.date}/>
+                <Form userID={this.props.location.state.userID}/>
             </div>
         );
     }
