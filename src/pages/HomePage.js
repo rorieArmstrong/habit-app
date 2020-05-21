@@ -40,7 +40,9 @@ class HomePage extends Component {
             )
         }else{
             return (
-                <div>
+                <div className="Page">
+                    <h1>Welcome to Habyte</h1>
+                    <h3>the habit tracker for you</h3>
                     <div>
                         <button className= "login" onClick={() => this.handleChange("login")}>
                             Log In 

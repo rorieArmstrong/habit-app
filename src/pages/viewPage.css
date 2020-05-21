@@ -22,6 +22,13 @@
     justify-content: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 p {
     margin: 0
 }
@@ -43,12 +50,14 @@ p {
     align-items: center;
 }
 
+
 .checkbox {
     margin: 15px
 }
 
 .fullHabit {
     border: 1px solid white;
+    width: 50vw;
     max-width: 100%;
     margin: 10px;
     background-color: rgba(0, 0, 0, 0.349);
