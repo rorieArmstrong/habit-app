@@ -26,7 +26,7 @@ router.get("/habits/:id", function (req, res, next) {
 router.get('/habits/users/:id', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
     db('habits')
-    .select('habitID', 'activity', 'date_of_entry', 'frequency', 'streak')
+    .select('habitID', 'activity', 'date_of_entry', 'frequency', 'streak', 'date_of_streak')
     .distinct('activity')
     .where('userID', parseInt(req.params.id))
     .groupBy('activity')
