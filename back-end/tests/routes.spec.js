@@ -82,8 +82,6 @@ describe('API Routes', function() {
         res.body[0].should.be.a('object');
         res.body[0].should.have.property('habitID');
         res.body[0].habitID.should.equal(1);
-        res.body[0].should.have.property('userID');
-        res.body[0].userID.should.equal(1);
         res.body[0].should.have.property('activity');
         res.body[0].activity.should.equal('coding');
         res.body[0].should.have.property('date_of_entry');
