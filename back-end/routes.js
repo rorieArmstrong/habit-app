@@ -18,9 +18,6 @@ router.get("/habits/:id", function (req, res, next) {
     .then(function (habit) {
       res.status(200).json(habit);
     })
-    .catch(function (error) {
-      next(error);
-    });
 });
 
 router.get('/habits/users/:id', function(req, res, next) {
@@ -32,9 +29,6 @@ router.get('/habits/users/:id', function(req, res, next) {
     .groupBy('activity')
     .then(function (habits) {
         res.status(200).json(habits);
-    })
-    .catch(function (error) {
-        next(error);
     })
 })
 
@@ -49,9 +43,6 @@ router.post("/habits", function (req, res, next) {
     .then(function (show) {
       res.status(200).json(show);
     })
-    .catch(function (error) {
-      next(error);
-    });
 });
 
 router.put("/habits/:id", function (req, res, next) {
@@ -74,9 +65,6 @@ router.put("/habits/:id", function (req, res, next) {
     .then(function (show) {
       res.status(200).json(show);
     })
-    .catch(function (error) {
-      next(error);
-    });
 });
 
 router.delete("/habits/:id", function (req, res, next) {
@@ -92,13 +80,7 @@ router.delete("/habits/:id", function (req, res, next) {
         .then(function () {
           res.status(200).json('row deleted');
         })
-        .catch(function (error) {
-          next(error);
-        });
     })
-    .catch(function (error) {
-      next(error);
-    });
 });
 
 module.exports = router;

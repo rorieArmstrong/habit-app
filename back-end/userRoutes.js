@@ -37,9 +37,6 @@ router.post("/register", function (req, res, next) {
     .then(function (show) {
       res.status(200).json(show);
     })
-    .catch(function (error) {
-      next(error);
-    });
 });
 
 module.exports = router;
