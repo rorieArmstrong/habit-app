@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import './SignUp.css';
 
 class SignUp extends Component {
     constructor(props) {
@@ -55,7 +56,7 @@ class SignUp extends Component {
     
     render() {
         return (
-            <div className="Sign Up">
+            <div className="signUp">
                 <form className="UserAuth" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Username" value={this.state.value} name='user_name' onChange={this.handleChange} />
                     <input type="password" placeholder="Password" value={this.state.value} name='password' onChange={this.handleChange} />
@@ -68,8 +69,8 @@ class SignUp extends Component {
                         style={{ marginRight: "5px" }}
                         />
                     )}
-                    {this.state.loading && <span>Creating Acount</span>}
-                    {!this.state.loading && <span>Create Acount</span>}
+                    {this.state.loading && <span>Creating Account</span>}
+                    {!this.state.loading && <span>Create Account</span>}
                     </button>
                 </form>
             </div>
