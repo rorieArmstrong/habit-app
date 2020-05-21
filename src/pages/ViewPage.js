@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HabiList from '../components/HabitList'
 import Form from '../components/Form'
+import './viewPage.css'
 
 class ViewPage extends Component {
     constructor(props) {

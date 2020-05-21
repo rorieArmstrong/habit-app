@@ -69,8 +69,8 @@ class Form extends Component {
     
     render() {
         return (
-            <div className="Sign Up">
-                <form className="UserAuth" onSubmit={this.handleSubmit}>
+            <div className="signUp">
+                <form className="userAuth" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Activity" value={this.state.value} name='activity' onChange={this.handleChange} required/>
                     <select 
                         onChange={this.handleChange}
@@ -80,9 +80,9 @@ class Form extends Component {
                             <option value="weekly">weekly</option>
                             <option value="monthly">monthly</option>
                     </select>
-                    <label>
+                    <label className='habitLabel'>
+                    Have you done this today?
                         <input type="checkbox" value={this.state.today} name="today" onChange={this.doneToday} />
-                        Have you done this today?
                     </label>
                     <button disabled={this.state.loading} className="button" type="submit">
                     {this.state.loading && (

@@ -10,10 +10,19 @@ class HabitList extends Component {
             userID: this.props.userID,
             habits: [],
             date: this.props.date,
-            toUpdate: {}
+            toUpdate: {},
+            firstName: ''
         }
     }
-    
+
+    getUser = () => {
+        fetch(`http://localhost:8000/users/${this.props.userID}`)
+        .then(response => response.json())
+        .then(user => {return this.setState({firstName: user[0].first_name})})
+        .catch(err => {
+            console.log(err)
+        })
+    }
     getData = () => {
         fetch(`http://localhost:8000/api/habits/users/${this.props.userID}`)
         .then(response => response.json())
@@ -73,6 +82,7 @@ class HabitList extends Component {
                 return this.updateStreak(habit)
             })})
         .then(this.getData())
+        .then(this.getUser())
         .catch(err => {
             console.log(err)
         })
@@ -160,15 +170,16 @@ class HabitList extends Component {
 
     render() {
         return (
-            <div>
+            <div classname='habitList'>
+                <p className="welcomeTitle">Welcome, {this.state.firstName}</p>
                 <form onSubmit={this.addToStreak}>
                     {this.state.habits.map(habit => {
                         return (
-                            <div key={habit.habitID}>
+                            <div className='fullHabit' key={habit.habitID}>
                                 <Habit  data={habit} date={this.props.date}/>
-                                <label>
-                                    <input type="checkbox" value={this.state.today} name={"today"+habit.habitID} onChange={() => {this.doneToday(habit.habitID)}} />
-                                    Have you done this today?
+                                <label className="habitLabel">
+                                Have you done this today?
+                                    <input className="checkbox" type="checkbox" value={this.state.today} name={"today"+habit.habitID} onChange={() => {this.doneToday(habit.habitID)}} />
                                 </label>
                             </div>
                         )

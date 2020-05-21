@@ -62,10 +62,10 @@ class Habit extends Component {
 
     render() {
         return (
-            <div>
-                <h3>{this.state.data.activity}</h3>
+            <div className='habit'>
+                <h3 className="activity">{this.state.data.activity}</h3>
                 <button onClick={() => {this.deleteHabit()}}>
-                    X
+                    Delete Habit
                 </button>
                 <p>{this.state.data.streak}</p>
                 <p>Done today: {(this.state.data.date_of_entry === this.state.date && this.state.data.streak > 0)? "Yes": "No"}</p>

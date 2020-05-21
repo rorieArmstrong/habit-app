@@ -46,7 +46,7 @@ class Login extends Component {
                         style={{ marginRight: "5px" }}
                         />
                     )}
-                    {this.state.loading && <span>Logining In</span>}
+                    {this.state.loading && <span>Logging In</span>}
                     {!this.state.loading && <span>Submit</span>}
                     </button>
                 </form>
