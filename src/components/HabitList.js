@@ -118,58 +118,29 @@ class HabitList extends Component {
                     if(entry.diff(now, 'days') === 1){
                         streak += 1;
                     }
-                    if(streak===0){streak=1}
-                    const updatedData = {
-                        streak: streak,
-                        date_of_entry: todays_date
-                    };
-                    fetch(`http://localhost:8000/api/habits/${habit.habitID}`, {
-                            method: 'PUT', 
-                            mode: 'cors', 
-                            headers: {
-                                'Content-Type': 'application/json'
-                                // 'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: JSON.stringify(updatedData) // 
-                    })
-                    
                 }else if(habit.frequency === "weekly"){
                     if(8<= entry.diff(now, 'days') <= 14){
                         streak += 1;
                     }
-                    if(streak===0){streak=1}
-                    const updatedData = {
-                        streak: streak,
-                        date_of_entry: todays_date
-                    };
-                    fetch(`http://localhost:8000/api/habits/${habit.habitID}`, {
-                            method: 'PUT', 
-                            mode: 'cors', 
-                            headers: {
-                                'Content-Type': 'application/json'
-                                // 'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: JSON.stringify(updatedData) // 
-                    })
                 }else if(habit.frequency === "monthly"){
                     if(entry.diff(now, 'months') === 1){
                         streak += 1;
-                    }
-                    if(streak===0){streak=1}
-                    const updatedData = {
-                        streak: streak,
-                        date_of_entry: todays_date
-                    };
-                    fetch(`http://localhost:8000/api/habits/${habit.habitID}`, {
-                            method: 'PUT', 
-                            mode: 'cors', 
-                            headers: {
-                                'Content-Type': 'application/json'
-                                // 'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: JSON.stringify(updatedData) // 
-                    })
+                    } 
                 }
+                if(streak===0){streak=1}
+                const updatedData = {
+                    streak: streak,
+                    date_of_entry: todays_date
+                };
+                fetch(`http://localhost:8000/api/habits/${habit.habitID}`, {
+                        method: 'PUT', 
+                        mode: 'cors', 
+                        headers: {
+                            'Content-Type': 'application/json'
+                            // 'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: JSON.stringify(updatedData) // 
+                })
             }
         }
         window.location.reload(true)
