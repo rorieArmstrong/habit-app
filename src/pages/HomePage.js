@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SignUp from '../components/SignUp';
 import Login from '../components/Login';
+import './homePage.css'
 
 class HomePage extends Component {
     constructor(props) {
