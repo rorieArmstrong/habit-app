@@ -1,38 +1,13 @@
 // Update with your config settings.
-require('dotenv').config();
-const path = require('path')
-const dbPath = path.resolve(__dirname, 'data/habits.sqlite3')
 
 module.exports = {
 
   development: {
     client: 'sqlite3',
     connection: {
-      filename: dbPath
-    },
-    useNullAsDefault: true,
-    migrations: {
-      directory: './data/migrations',
-    },
-    seeds: {
-      directory: './data/seeds'
+      filename: './dev.sqlite3'
     }
   },
-
-  test: {
-    client: 'sqlite3',
-    connection: {
-      filename: './back-end/data/habits.sqlite3'
-    },
-    useNullAsDefault: true,
-    migrations: {
-      directory: './back-end/data/migrations',
-    },
-    seeds: {
-      directory: './back-end/data/seeds'
-    }
-  },
-
 
   staging: {
     client: 'postgresql',

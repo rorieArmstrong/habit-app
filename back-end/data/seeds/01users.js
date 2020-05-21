@@ -22,6 +22,11 @@ exports.seed = function(knex) {
           password: 'test123',
           first_name: 'Keir',
           surname: 'Pearson'
+        },{
+          user_name: 'susanMissaglia',
+          password: 'test123',
+          first_name: 'Susan',
+          surname: 'Missaglia'
         },
       ]);
     });

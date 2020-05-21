@@ -1,0 +1,64 @@
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.userAuth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.habitLabel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    margin: 0
+}
+
+.activity {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 12px;
+}
+
+.welcomeTitle {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.habit {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.checkbox {
+    margin: 15px
+}
+
+.fullHabit {
+    border: 1px solid white;
+    width: 50vw;
+    max-width: 100%;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.349);
+}
