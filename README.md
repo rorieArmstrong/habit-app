@@ -4,7 +4,7 @@
 
 `Npm install`  - Install project dependencies <br/>
 
-Run `Node Server.js` in backend folder of project directory - Initiliases Database server<br/>
+Run `Node Server.js` in backend folder of project directory - initialises Database server<br/>
 
 Change directory to project root, Run `NPM start` - Initialises Frontend server<br/>
 
