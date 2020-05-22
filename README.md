@@ -15,108 +15,66 @@ Your website should have the following technical functionality:
 ---
 ## Standups
 ### Tuesday
-#### What you achieved yesterday.
+#### What we achieved yesterday.
 
--Liam: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
+Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app. Create Log in template.
 
--Susan: Was Ill :(
 
--Rorie: Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app. Create Log in template.
-
--Keir:  Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app.
-
-#### What you aim to achieve today.
--Liam: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
-
--Susan: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
-
--Rorie: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
-
--Keir: Build the routes for the backend server. Create a basic frontend. Flesh out log in and sign up.
+#### What we aim to achieve today.
+-Build the routes for the API. 
+-Create a basic frontend. 
+-Flesh out log in and sign up.
 
 #### Any blockers (things that are going to stop you achieving you aim)
--Liam: Can't think of any right now.
+-LogIn/SignUp can't be started until UserAuth routes have been established
 
--Susan: Can't think of any right now.
 
--Rorie: Can't think of any right now.
-
--Keir: Can't think of any right now.
 ### Wednesday
 #### What you achieved yesterday.
--Liam:
+-Routes established(api/ user auth) 
+-API routes tested
+-Frontend skeleton established
 
--Susan:
 
--Rorie:
 
--Keir:
 #### What you aim to achieve today.
--Liam:
+-Connect front & back end - display retrieved data
+-Log-in/sign-up functionality
+-Test UserAuth Routes
 
--Susan:
 
--Rorie:
-
--Keir:
 #### Any blockers (things that are going to stop you achieving you aim)
--Liam:
+-n/a
 
--Susan:
-
--Rorie:
-
--Keir:
 ### Thursday
 #### What you achieved yesterday.
--Liam:
+-Begun frontend testing 
+-Finished backend testing (UserAuth Routes)
+-Connected front&backend (displaying data)
+-Log-in / Sign-up functionality 
+-Delete habit button
+-Begun work on updating habit streak feature
 
--Susan:
 
--Rorie:
-
--Keir:
 #### What you aim to achieve today.
--Liam:
+-Finish frontend testing
+-Finish habit streak feature
+-Styling 
 
--Susan:
 
--Rorie:
-
--Keir:
 #### Any blockers (things that are going to stop you achieving you aim)
--Liam:
+-n/a
 
--Susan:
-
--Rorie:
-
--Keir:
 ### Friday
 #### What you achieved yesterday.
--Liam:
+-Styling finished
+-Completed app functionality
 
--Susan:
-
--Rorie:
-
--Keir:
 #### What you aim to achieve today.
--Liam:
+-Finish Frontend tests
 
--Susan:
-
--Rorie:
-
--Keir:
 #### Any blockers (things that are going to stop you achieving you aim)
--Liam:
-
--Susan:
-
--Rorie:
-
--Keir:
+n/a
 
 ---
 ### What we have learned
