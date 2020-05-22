@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
 import SignUp from '../components/SignUp'
+import { MemoryRouter } from 'react-router-dom';
 
 
 const findByTestAttr = (wrapper, val) => {
@@ -13,13 +14,17 @@ const findByTestAttr = (wrapper, val) => {
 describe('<SignUp />', () => {
     it('mounts to DOM', () => {
         const div = document.createElement('div');
-        ReactDOM.render(<SignUp />, div);
+        ReactDOM.render(
+        <MemoryRouter>    
+            <SignUp />
+        </MemoryRouter>
+        , div);
         ReactDOM.unmountComponentAtNode(div);
     });
   
     let wrapper;
 
-    beforeEach(() => wrapper = shallow(<SignUp />));
+    beforeEach(() => wrapper = shallow(<SignUp.WrappedComponent />));
     it('Renders correctly', () => {
         expect(wrapper).toMatchSnapshot();
     })
