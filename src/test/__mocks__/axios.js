@@ -1,6 +1,9 @@
 'use strict';
+ 
+let currentId = 2;
+ 
 module.exports = {
-  get: () => {
+  get: (url) => {
     return Promise.resolve({
       data: [
         {
@@ -12,6 +15,16 @@ module.exports = {
           name: 'Make the bed'
         }
       ]
+    });
+  },
+  post: (url, data) => {
+    return Promise.resolve({
+      data: {
+        task: {
+          name: data.task,
+          id: currentId++
+        }
+      }
     });
   }
 };

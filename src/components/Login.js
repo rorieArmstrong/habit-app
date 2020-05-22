@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 class Login extends Component {
     constructor(props) {
@@ -14,7 +14,6 @@ class Login extends Component {
 
     handleChange = (event) => {
         return this.setState({[event.target.name]: event.target.value})
-        event.preventDefault();
     }
 
     handleSubmit = (event) => {
@@ -28,7 +27,9 @@ class Login extends Component {
         .then((e) => {this.props.history.push("/habits",  { userID: this.state.userID})})
         .catch(error => {
             this.setState({loading: false}) 
-            alert("Invalid Username or Password")})
+            alert("Invalid Username or Password")
+            console.log(error)
+        })
 
         this.setState({loading: false})
     }
@@ -55,4 +56,4 @@ class Login extends Component {
     }
 }
 
- export default Login;
+ export default withRouter(Login);
