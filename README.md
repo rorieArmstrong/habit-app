@@ -4,6 +4,10 @@
 
 `Npm install`  - Install project dependencies <br/>
 
+Run `CD backend` from root <br/>
+
+Run `knex migrate:latest`, followed by `knex seed:run`   - Generates tables in DB and populates with existing data<br/>
+
 Run `Node Server.js` in backend folder of project directory - initialises Database server<br/>
 
 Change directory to project root, Run `NPM start` - Initialises Frontend server<br/>
