@@ -82,26 +82,26 @@ n/a
 
 ---
 ### What we have learned
-Rorie: Alot more in React. How to redirect. Cors troubleshooting. PUT & DELETE Requests
-Keir: Ensure files are staged before committing.
-Susan: How to create more meaningful tests
-Liam: Further developed understanding of backend route testing
+Rorie: Alot more in React. How to redirect. Cors troubleshooting. PUT & DELETE Requests<br/>
+Keir: Ensure files are staged before committing.<br/>
+Susan: How to create more meaningful tests <br/>
+Liam: Further developed understanding of backend route testing <br/>
+All: Coverage interface (/coverage/index.html)
 
 ### What challenges we overcame
-Rorie: Sending PUT/DELETE request from browser / solution: Using .history  ///
-Streaking updating logic
-Keir: Database Local Vs. Hosted
-Susan: Various frontend testing bits
-Liam: using ElephantSQL / Solution: changing to Sqlite
+Rorie: Sending PUT/DELETE request from browser / solution: Using .history  /// Streaking updating logic <br/>
+Keir: Database Local Vs. Hosted <br/>
+Susan: Various frontend testing bits <br/>
+Liam: using ElephantSQL / Solution: changing to Sqlite <br/>
 
 ### What we struggled with
-Rorie: testing  /  Using PostGres&Elephant
-Keir: testing  /  Using PostGres&Elephant 
-Susan: testing  /  Using PostGres&Elephant
-Liam: testing  /  Using PostGres&Elephant
+Rorie: testing  /  Using PostGres&Elephant <br/>
+Keir: testing  /  Using PostGres&Elephant  <br/> 
+Susan: testing  /  Using PostGres&Elephant <br/>
+Liam: testing  /  Using PostGres&Elephant <br/>
 
 ### What we would do differently next time
-Rorie: Learn complex testing (Mock functions & data / promise.resolve/reject)
-Keir: Learn complex testing (Mock functions & data / promise.resolve/reject)
-Susan: Learn complex testing (Mock functions & data / promise.resolve/reject)
-Liam: Learn complex testing (Mock functions & data / promise.resolve/reject)
+Rorie: Learn complex testing (Mock functions & data / promise.resolve/reject) <br/>
+Keir: Learn complex testing (Mock functions & data / promise.resolve/reject) <br/>
+Susan: Learn complex testing (Mock functions & data / promise.resolve/reject) <br/>
+Liam: Learn complex testing (Mock functions & data / promise.resolve/reject) <br/>
