@@ -37,12 +37,14 @@ describe('<Login />', () => {
 
    
     it('should fetch user data', () => {
-        // wrapper.find('button').simulate('click')
-        const fetchSpy = jest.spyOn(window, 'fetch');
-        const toDoListInstance = shallow(
-        <Login/>
-        );
-        expect(fetchSpy).toBeCalled(0);
+        const mockSuccessResponse = {};
+        const mockJsonPromise = Promise.resolve(mockSuccessResponse); // 2
+        const mockFetchPromise = Promise.resolve({ // 3
+        json: () => mockJsonPromise,
+        });
+        wrapper.find('button').simulate('click')
+        jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
+        expect(global.fetch).toBeCalled();
 
     });
   

@@ -14,9 +14,8 @@ class Form extends Component {
     };
 
     handleChange = (event) => {
-       
-        return this.setState({[event.target.name]: event.target.value})
         event.preventDefault();
+        return this.setState({[event.target.name]: event.target.value})
     }
 
     doneToday = () => {
@@ -71,6 +70,7 @@ class Form extends Component {
     render() {
         return (
             <div className="signUp" data-test="component-form">
+                <h3>Add a new habit</h3>
                 <form className="userAuth" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Activity" value={this.state.value} name='activity' onChange={this.handleChange} required/>
                     <select 

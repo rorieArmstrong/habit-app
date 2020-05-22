@@ -39,7 +39,7 @@ describe(HabitList, () => {
 
     it('should render a <div />', () => {
         const wrapper = setup();
-        expect(wrapper.find('div').length).toEqual(2);
+        expect(wrapper.find('div').length).toEqual(1);
     });
 
     it('should render a <button />', () => {
