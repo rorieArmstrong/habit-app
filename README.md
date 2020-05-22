@@ -1,5 +1,26 @@
 # habit-app
 # Habyte
+### Instructions for use
+
+`Npm install`  - Install project dependencies <br/>
+
+Run `Node Server.js` in backend folder of project directory - Initiliases Database server<br/>
+
+Change directory to project root, Run `NPM start` - Initialises Frontend server<br/>
+
+
+For Tests:
+
+Frontend:
+Run `NPM test -- --coverage a`  - Runs all frontend tests followed by coverage. <br/>
+
+Backend:
+Run `NPM run test2` - Run all backend tests. Upon CTRL + C to be presented with coverage <br/>
+
+
+
+
+
 ## Rorie, Keir, Liam and Susan
 
 For the rest of the week you will be working to create a habit tracker.
