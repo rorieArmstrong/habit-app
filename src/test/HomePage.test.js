@@ -82,6 +82,24 @@ describe(HomePage, () => {
         expect(initialLoginState).toBe("signup")
      })
 
+     it('should render Login component after login button clicked',()=>{
+        const status = '';
+        const wrapper = setup('', {status});
+        const buttonLogin = findByTestAttr(wrapper, 'login-button');
+        buttonLogin.simulate('click')
+        const initialLoginState = wrapper.state('status');
+        expect(initialLoginState).toBe("login")
+     })
+
+     it('should render SignUp component after signUp button clicked',()=>{
+        const status = '';
+        const wrapper = setup('', {status});
+        const buttonSignUp = findByTestAttr(wrapper, 'signUp-button');
+        buttonSignUp.simulate('click')
+        const initialLoginState = wrapper.state('status');
+        expect(initialLoginState).toBe("signup")
+     });
+
  })
 
 
