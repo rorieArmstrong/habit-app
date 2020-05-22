@@ -82,6 +82,26 @@ n/a
 
 ---
 ### What we have learned
+Rorie: Alot more in React. How to redirect. Cors troubleshooting. PUT & DELETE Requests
+Keir: Ensure files are staged before committing.
+Susan: How to create more meaningful tests
+Liam: Further developed understanding of backend route testing
+
 ### What challenges we overcame
+Rorie: Sending PUT/DELETE request from browser / solution: Using .history  ///
+Streaking updating logic
+Keir: Database Local Vs. Hosted
+Susan: Various frontend testing bits
+Liam: using ElephantSQL / Solution: changing to Sqlite
+
 ### What we struggled with
+Rorie: testing  /  Using PostGres&Elephant
+Keir: testing  /  Using PostGres&Elephant 
+Susan: testing  /  Using PostGres&Elephant
+Liam: testing  /  Using PostGres&Elephant
+
 ### What we would do differently next time
+Rorie: Learn complex testing (Mock functions & data / promise.resolve/reject)
+Keir: Learn complex testing (Mock functions & data / promise.resolve/reject)
+Susan: Learn complex testing (Mock functions & data / promise.resolve/reject)
+Liam: Learn complex testing (Mock functions & data / promise.resolve/reject)
