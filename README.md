@@ -17,30 +17,34 @@ Your website should have the following technical functionality:
 ### Tuesday
 #### What we achieved yesterday.
 
-Created a design template and planned the components that we would need. Tried multiple database solutions to find the best fit for our project. Created the schema for our database tables. Bootstraped the frontend with create-react-app. Create Log in template.
+-Created a design template and planned the components that we would need.<br/>
+-Tried multiple database solutions to find the best fit for our project. <br/>
+-Created the schema for our database tables. <br/>
+-Bootstraped the frontend with create-react-app. <br/>
+-Created Log in template.<br/>
 
 
 #### What we aim to achieve today.
--Build the routes for the API. 
--Create a basic frontend. 
--Flesh out log in and sign up.
+-Build the routes for the API. <br/>
+-Create a basic frontend. <br/>
+-Flesh out log in and sign up.<br/>
 
 #### Any blockers (things that are going to stop you achieving you aim)
--LogIn/SignUp can't be started until UserAuth routes have been established
+-LogIn/SignUp can't be started until UserAuth routes have been established <br/>
 
 
 ### Wednesday
 #### What you achieved yesterday.
--Routes established(api/ user auth) 
--API routes tested
--Frontend skeleton established
+-Routes established(api/ user auth) <br/>
+-API routes tested <br/>
+-Frontend skeleton established <br/>
 
 
 
 #### What you aim to achieve today.
--Connect front & back end - display retrieved data
--Log-in/sign-up functionality
--Test UserAuth Routes
+-Connect front & back end - display retrieved data <br/>
+-Log-in/sign-up functionality <br/>
+-Test UserAuth Routes <br/>
 
 
 #### Any blockers (things that are going to stop you achieving you aim)
@@ -48,18 +52,18 @@ Created a design template and planned the components that we would need. Tried m
 
 ### Thursday
 #### What you achieved yesterday.
--Begun frontend testing 
--Finished backend testing (UserAuth Routes)
--Connected front&backend (displaying data)
--Log-in / Sign-up functionality 
--Delete habit button
--Begun work on updating habit streak feature
+-Begun frontend testing  <br/>
+-Finished backend testing (UserAuth Routes) <br/>
+-Connected front&backend (displaying data) <br/>
+-Log-in / Sign-up functionality  <br/>
+-Delete habit button <br/>
+-Begun work on updating habit streak feature <br/>
 
 
 #### What you aim to achieve today.
--Finish frontend testing
--Finish habit streak feature
--Styling 
+-Finish frontend testing <br/>
+-Finish habit streak feature <br/>
+-Styling  <br/>
 
 
 #### Any blockers (things that are going to stop you achieving you aim)
@@ -67,11 +71,11 @@ Created a design template and planned the components that we would need. Tried m
 
 ### Friday
 #### What you achieved yesterday.
--Styling finished
--Completed app functionality
+-Styling finished <br/> 
+-Completed app functionality <br/>
 
 #### What you aim to achieve today.
--Finish Frontend tests
+-Finish Frontend tests <br/>
 
 #### Any blockers (things that are going to stop you achieving you aim)
 n/a
